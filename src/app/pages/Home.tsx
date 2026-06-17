@@ -1242,18 +1242,28 @@ export default function Home() {
           <p style={{ color: SUBTLE, fontSize: "12px", fontWeight: 500 }}>
             © 2024 Jurme Tenzin · Senior UX/UI Designer · Bhutan
           </p>
-          <div className="flex items-center gap-5">
-            {["Behance", "Dribbble", "LinkedIn"].map((l) => (
-              <a
-                key={l}
-                href="#"
-                className="transition-colors hover:opacity-70"
-                style={{ color: MUTED, fontSize: "12px", fontWeight: 500 }}
-              >
-                {l}
-              </a>
-            ))}
-          </div>
+        <div className="flex items-center gap-5">
+  {[
+    { name: "Behance", link: "https://www.behance.net/jurme" },
+    { name: "Dribbble", link: "https://dribbble.com/Jurme" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/jurme-tenzin-299892137/" },
+  ].map((item) => (
+    <a
+      key={item.name}
+      href={item.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors hover:opacity-70"
+      style={{
+        color: MUTED,
+        fontSize: "12px",
+        fontWeight: 500,
+      }}
+    >
+      {item.name}
+    </a>
+  ))}
+</div>
         </div>
       </footer>
     </div>
