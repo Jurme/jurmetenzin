@@ -1240,7 +1240,7 @@ export default function Home() {
             jurme
           </span>
           <p style={{ color: SUBTLE, fontSize: "12px", fontWeight: 500 }}>
-            © 2024 Jurme Tenzin · Senior UX/UI Designer · Bhutan
+            © 2026 Jurme Tenzin · Senior UX/UI Designer · Bhutan
           </p>
         <div className="flex items-center gap-5">
   {[
