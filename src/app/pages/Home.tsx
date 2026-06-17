@@ -1009,33 +1009,43 @@ export default function Home() {
                 style={{ color: TEXT, fontSize: "15px", fontWeight: 400, lineHeight: 1.75 }}
               >
                 <p>
-                  I combine strategic thinking with hands-on craft to design experiences that feel inevitable.
-                  From property platforms to gallery apps, I&apos;ve helped founders and startups ship products their users love.
+                I am UX/UI engineer based in Bhutan, working at the intersection of design, business needs, and technology, turning ideas 
+                  into seamless digital experiences. Whether it’s building intuitive interfaces, refining user journeys, or creating engaging
+                  visuals, I focus on making things clear, effective, and scalable for the users. 
+                 
                 </p>
                 <p style={{ color: MUTED }}>
-                  My process starts with understanding people, moves through structured thinking, and ends with interfaces that are clear, accessible, and beautifully simple.
+                   With over 6+ years of experience, I’ve designed impactful products, delivering solutions that simplify
+                  complexity and drive engagement. My background in UX research, interaction design, and visual storytelling lets 
+                  me balance practical execution with strategic vision to achieve results. Always open to tackling exciting design challenges—let’s connect!
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-2 mt-8">
-                {["Behance", "Dribbble", "LinkedIn"].map((l) => (
-                  <a
-                    key={l}
-                    href="#"
-                    className="transition-colors hover:bg-slate-50"
-                    style={{
-                      padding: "8px 14px",
-                      border: `1px solid ${HAIR}`,
-                      borderRadius: "999px",
-                      color: TEXT,
-                      fontSize: "12px",
-                      fontWeight: 500,
-                    }}
-                  >
-                    {l}
-                  </a>
-                ))}
-              </div>
+             <div className="flex flex-wrap items-center gap-2 mt-8">
+  {[
+    { name: "Behance", link: "https://www.behance.net/jurme" },
+    { name: "Dribbble", link: "https://dribbble.com/Jurme" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/jurme-tenzin-299892137/" },
+  ].map((item) => (
+    <a
+      key={item.name}
+      href={item.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors hover:bg-slate-50"
+      style={{
+        padding: "8px 14px",
+        border: `1px solid ${HAIR}`,
+        borderRadius: "999px",
+        color: TEXT,
+        fontSize: "12px",
+        fontWeight: 500,
+      }}
+    >
+      {item.name}
+    </a>
+  ))}
+</div>
               <a
                 href="mailto:gyurmey195@gmail.com"
                 className="inline-flex items-center gap-1.5 mt-5 transition-colors hover:opacity-70"
@@ -1127,7 +1137,7 @@ export default function Home() {
                 name: "Tanya Gray",
                 handle: "Product Manager, eMedialinks",
                 initials: "TG",
-                quote: "Jurme is incredibly efficient! I'm impressed with their work and plan to return with more milestone projects. Looking forward to continuing our successful collaboration!",
+                quote: "Jurme is incredibly efficient! I'm impressed with his work and plan to return with more milestone projects. Looking forward to continuing our successful collaboration!",
               },
               {
                 name: "Robert Mejia",
