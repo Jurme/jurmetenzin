@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewRentals - UX Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            },
+            colors: {
+              neutral: {
+                50: '#f9fafb',
+                100: '#f3f4f6',
+                200: '#e5e7eb',
+                300: '#d1d5db',
+                400: '#9ca3af',
+                500: '#6b7280',
+                600: '#4b5563',
+                700: '#374151',
+                800: '#1f2937',
+                900: '#111827',
+                950: '#030712',
+              }
+            },
+            borderRadius: {
+              '4xl': '2rem',
+              '5xl': '2.5rem',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-neutral-950 antialiased selection:bg-neutral-900 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-0 w-full z-50 px-6 pointer-events-none">
+      <div class="max-w-screen-xl mx-auto flex justify-between items-center pointer-events-auto">
+        <a href="index.html" class="bg-white/90 backdrop-blur-xl border border-neutral-200 text-sm font-bold px-5 py-3 rounded-full hover:bg-neutral-50 hover:scale-105 transition-all flex items-center gap-2 shadow-sm text-neutral-900">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          <span>Back</span>
+        </a>
+        
+        <div class="bg-black text-white px-5 py-3 rounded-full font-bold text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer" >
+          <a href="Gallaflex.html"> Next Project</a>  
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="pt-40 pb-20 px-6 max-w-screen-xl mx-auto min-h-[90vh] flex flex-col items-center text-center">
+        <div class="fade-in-section flex flex-col items-center gap-8 mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-600 text-sm font-bold tracking-tight">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            UX CASE STUDY 2024
+          </div>
+          
+          <h1 class="text-5xl md:text-8xl lg:text-8xl font-extrabold tracking-tighter leading-[0.9] text-neutral-950 max-w-5xl mx-auto">
+            NewRentals<span class="text-neutral-300">.</span>
+          </h1>
+          
+          <p class="text-xl md:text-2xl text-neutral-500 max-w-2xl font-medium leading-relaxed">
+            The all-in-one ecosystem designed to <span class="text-neutral-900 underline decoration-neutral-300 decoration-2 underline-offset-4">automate the rental lifecycle</span> for owners and tenants.
+          </p>
+        </div>
+        
+        <div class="fade-in-section delay-200 w-full">
+          <div class="w-full relative group">
+             <div class="absolute inset-0 bg-neutral-900 rounded-4xl transform  opacity-5 scale-[0.98] transition-transform duration-500 "></div>
+             <div class="w-full aspect-[16/9] md:aspect-[21/9] bg-neutral-100 rounded-4xl overflow-hidden border border-neutral-200 relative shadow-sm ">
+                <img src="images/newrentalcover.png" alt="NewRentals Hero Mockup" class="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-105" />
+                
+                <div class="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 flex justify-between items-end">
+                    
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Details -->
+      <section class="py-20 px-6">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="fade-in-section grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Role -->
+            <div class="bg-neutral-50 p-10 rounded-4xl border border-neutral-100 flex flex-col justify-between h-64 hover:bg-neutral-100 transition-colors group">
+              <div class="w-12 h-12 rounded-2xl bg-white border border-neutral-200 flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                 <svg class="text-neutral-900" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-bold text-neutral-400 uppercase tracking-wider mb-2">Role</h3>
+                <p class="text-3xl font-extrabold text-neutral-900 tracking-tight">Product Designer</p>
+              </div>
+            </div>
+
+            <!-- Duration -->
+            <div class="bg-neutral-50 p-10 rounded-4xl border border-neutral-100 flex flex-col justify-between h-64 hover:bg-neutral-100 transition-colors group">
+               <div class="w-12 h-12 rounded-2xl bg-white border border-neutral-200 flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
+                 <svg class="text-neutral-900" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+               <h3 class="text-sm font-bold text-neutral-400 uppercase tracking-wider mb-2">Duration</h3>
+               <p class="text-3xl font-extrabold text-neutral-900 tracking-tight">3 Weeks Sprint</p>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="bg-neutral-900 p-10 rounded-4xl border border-neutral-900 flex flex-col justify-between h-64 text-white group relative overflow-hidden">
+               <div class="absolute top-0 right-0 w-32 h-32 bg-neutral-800 rounded-full blur-3xl -mr-16 -mt-16 opacity-50"></div>
+               <div class="w-12 h-12 rounded-2xl bg-neutral-800 border border-neutral-700 flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform relative z-10">
+                 <svg class="text-white" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+              </div>
+              <div class="relative z-10">
+                <h3 class="text-sm font-bold text-neutral-500 uppercase tracking-wider mb-3">Toolkit</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 bg-neutral-800 border border-neutral-700 rounded-lg text-sm text-neutral-200 font-bold">Figma</span>
+                  <span class="px-3 py-1.5 bg-neutral-800 border border-neutral-700 rounded-lg text-sm text-neutral-200 font-bold">Miro</span>
+                  <span class="px-3 py-1.5 bg-neutral-800 border border-neutral-700 rounded-lg text-sm text-neutral-200 font-bold">Trello</span>
+                  <span class="px-3 py-1.5 bg-neutral-800 border border-neutral-700 rounded-lg text-sm text-neutral-200 font-bold">Illustrator</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview -->
+      <section id="overview" class="py-32 px-6 bg-white">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+          <div class="md:col-span-5">
+            <div class="fade-in-section sticky top-32">
+               <h2 class="text-5xl md:text-6xl font-extrabold tracking-tighter mb-8 text-neutral-900 leading-[0.9]">
+                 Overview.
+               </h2>
+               <div class="h-2 w-24 bg-neutral-900 rounded-full"></div>
+            </div>
+          </div>
+          <div class="md:col-span-7">
+            <div class="fade-in-section delay-200 text-xl md:text-2xl leading-relaxed font-medium text-neutral-500 space-y-8">
+              <p>
+                <strong class="text-neutral-900">NewRentals</strong> is an all-in-one real estate ecosystem. It bridges the gap between disconnected manual processes and a seamless digital experience.
+              </p>
+              <p>
+                It aims to automate the process of renting, onboarding people to properties, and managing the tenants by the property owners.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem -->
+      <section id="problem" class="py-32 px-6 bg-white">
+        <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16">
+          <div class="md:col-span-5">
+            <div class="fade-in-section sticky top-32">
+               <h2 class="text-5xl md:text-6xl font-extrabold tracking-tighter mb-8 text-neutral-900 leading-[0.9]">
+                 The Problem.
+               </h2>
+               <div class="h-2 w-24 bg-neutral-900 rounded-full"></div>
+            </div>
+          </div>
+          <div class="md:col-span-7">
+            <div class="fade-in-section delay-200 text-xl md:text-2xl leading-relaxed font-medium text-neutral-500 space-y-8">
+              <p>
+                In real estate, there's a need for a simple system that combines property rental management and a rental marketplace. 
+              </p>
+              <p>
+                Traditional methods involve a lot of <span class="bg-red-50 text-red-600 px-2 py-0.5 rounded font-bold">manual work and inefficiencies</span>, causing delays and mistakes. This creates frustration for everyone involved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Audience -->
+      <section class="py-24 px-6 bg-neutral-50" id="audience">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="fade-in-section mb-16 text-center max-w-2xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-neutral-900">User & Audience</h2>
+            <p class="text-xl text-neutral-500 font-medium">Identifying the key players in the ecosystem.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="fade-in-section delay-100 bg-white p-12 rounded-4xl h-full border border-neutral-100 hover:shadow-xl transition-all duration-500 group">
+              <div class="w-16 h-16 bg-neutral-100 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-neutral-900 group-hover:text-white transition-colors duration-300 text-neutral-900">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <h3 class="text-3xl font-bold tracking-tight mb-4 text-neutral-900">Property Owners</h3>
+              <p class="text-neutral-500 leading-relaxed font-medium text-lg">
+                Individuals who own rental properties and seek effective ways to efficiently onboard tenants, manage their properties, and address various challenges related to tenant management.
+              </p>
+            </div>
+
+            <div class="fade-in-section delay-200 bg-white p-12 rounded-4xl h-full border border-neutral-100 hover:shadow-xl transition-all duration-500 group">
+              <div class="w-16 h-16 bg-neutral-100 rounded-3xl flex items-center justify-center mb-8 group-hover:bg-neutral-900 group-hover:text-white transition-colors duration-300 text-neutral-900">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h3 class="text-3xl font-bold tracking-tight mb-4 text-neutral-900">Tenants & Seekers</h3>
+              <p class="text-neutral-500 leading-relaxed font-medium text-lg">
+                People who are searching for suitable homes to rent or who are currently renting properties. They need a streamlined way to find, apply, and manage their rental life.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="py-32 px-6 max-w-screen-xl mx-auto" id="process">
+        <div class="fade-in-section mb-24 flex flex-col md:flex-row justify-between items-end gap-6 border-b border-neutral-200 pb-8">
+           <h2 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-neutral-900">The Process</h2>
+           <p class="text-xl text-neutral-500 font-medium mb-2">From chaos to clarity: a 3-week sprint.</p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="fade-in-section delay-100 group flex flex-col md:flex-row gap-8 items-stretch bg-white border border-neutral-200 p-8 rounded-4xl hover:border-neutral-300 hover:shadow-lg transition-all">
+              <div class="md:w-32 flex-shrink-0 flex flex-col justify-between">
+                <span class="text-5xl font-extrabold text-neutral-200 group-hover:text-neutral-900 transition-colors">01</span>
+              </div>
+              <div class="flex-1 flex flex-col md:flex-row gap-8 md:items-center">
+                 <div class="flex-1">
+                    <span class="block text-xs uppercase tracking-widest text-neutral-400 font-bold mb-2">Discovery</span>
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-3">Research & Empathy</h3>
+                    <p class="text-neutral-500 leading-relaxed font-medium">To understand the disconnect between property owners and tenants, I utilized Google Forms to survey 50+ participants. We mapped out pain points using Miro to visualize the friction.</p>
+                 </div>
+                 <div class="flex md:flex-col gap-2 flex-shrink-0">
+                    <span class="text-xs font-bold px-4 py-2 bg-neutral-100 text-neutral-600 rounded-full text-center">Google Form</span>
+                    <span class="text-xs font-bold px-4 py-2 bg-neutral-100 text-neutral-600 rounded-full text-center">Miro</span>
+                 </div>
+              </div>
+          </div>
+
+          <div class="fade-in-section delay-200 group flex flex-col md:flex-row gap-8 items-stretch bg-white border border-neutral-200 p-8 rounded-4xl hover:border-neutral-300 hover:shadow-lg transition-all">
+              <div class="md:w-32 flex-shrink-0 flex flex-col justify-between">
+                <span class="text-5xl font-extrabold text-neutral-200 group-hover:text-neutral-900 transition-colors">02</span>
+              </div>
+              <div class="flex-1 flex flex-col md:flex-row gap-8 md:items-center">
+                 <div class="flex-1">
+                    <span class="block text-xs uppercase tracking-widest text-neutral-400 font-bold mb-2">Definition</span>
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-3">Structure & Flow</h3>
+                    <p class="text-neutral-500 leading-relaxed font-medium">Synthesized research into user personas and mapped out the ideal user journey. Trello was used to manage tasks and track the sprint progress.</p>
+                 </div>
+                 <div class="flex md:flex-col gap-2 flex-shrink-0">
+                    <span class="text-xs font-bold px-4 py-2 bg-neutral-100 text-neutral-600 rounded-full text-center">Trello</span>
+                    <span class="text-xs font-bold px-4 py-2 bg-neutral-100 text-neutral-600 rounded-full text-center">Miro</span>
+                 </div>
+              </div>
+          </div>
+
+          <div class="fade-in-section delay-300 group flex flex-col md:flex-row gap-8 items-stretch bg-white border border-neutral-200 p-8 rounded-4xl hover:border-neutral-300 hover:shadow-lg transition-all">
+              <div class="md:w-32 flex-shrink-0 flex flex-col justify-between">
+                <span class="text-5xl font-extrabold text-neutral-200 group-hover:text-neutral-900 transition-colors">03</span>
+              </div>
+              <div class="flex-1 flex flex-col md:flex-row gap-8 md:items-center">
+                 <div class="flex-1">
+                    <span class="block text-xs uppercase tracking-widest text-neutral-400 font-bold mb-2">Execution</span>
+                    <h3 class="text-2xl font-bold text-neutral-900 mb-3">Visual Design</h3>
+                    <p class="text-neutral-500 leading-relaxed font-medium">Developed a cohesive design system in Figma. Created high-fidelity mockups and interactive prototypes using Adobe Illustrator for assets.</p>
+                 </div>
+                 <div class="flex md:flex-col gap-2 flex-shrink-0">
+                    <span class="text-xs font-bold px-4 py-2 bg-neutral-100 text-neutral-600 rounded-full text-center">Figma</span>
+                    <span class="text-xs font-bold px-4 py-2 bg-neutral-100 text-neutral-600 rounded-full text-center">Illustrator</span>
+                 </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research -->
+      <section class="py-32 px-6 max-w-screen-xl mx-auto" id="research">
+        <div class="fade-in-section mb-20 max-w-4xl">
+          <span class="px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs uppercase tracking-widest font-bold mb-6 inline-block">Qualitative Research</span>
+          <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-neutral-900">User Interviews</h2>
+          <div class="text-xl text-neutral-500 font-medium leading-relaxed space-y-6">
+            <p>I conducted a screening survey to recruit a diverse mix of property owners and tenants. This helped to conduct two sets of deep-dive interviews.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div class="fade-in-section delay-100 bg-neutral-50 p-10 rounded-4xl border border-neutral-200 h-full hover:bg-white hover:shadow-xl transition-all duration-300">
+            <div class="flex items-center gap-4 mb-8">
+              <div class="w-14 h-14 rounded-2xl bg-neutral-900 text-white flex items-center justify-center shadow-lg">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+              </div>
+              <h3 class="text-2xl font-bold text-neutral-900">Property Owners</h3>
+            </div>
+            <ul class="space-y-6">
+                <li class="flex gap-4 items-start">
+                  <span class="w-6 h-6 rounded-full bg-neutral-200 text-neutral-600 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+                  <span class="text-neutral-600 font-medium leading-snug">Most time-consuming steps in listing?</span>
+                </li>
+                <li class="flex gap-4 items-start">
+                  <span class="w-6 h-6 rounded-full bg-neutral-200 text-neutral-600 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+                  <span class="text-neutral-600 font-medium leading-snug">Pain points during tenant onboarding?</span>
+                </li>
+                <li class="flex gap-4 items-start">
+                  <span class="w-6 h-6 rounded-full bg-neutral-200 text-neutral-600 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+                  <span class="text-neutral-600 font-medium leading-snug">Tools used for communication?</span>
+                </li>
+            </ul>
+          </div>
+
+          <div class="fade-in-section delay-200 bg-neutral-50 p-10 rounded-4xl border border-neutral-200 h-full hover:bg-white hover:shadow-xl transition-all duration-300">
+             <div class="flex items-center gap-4 mb-8">
+              <div class="w-14 h-14 rounded-2xl bg-white border border-neutral-200 text-neutral-900 flex items-center justify-center shadow-sm">
+                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              </div>
+              <h3 class="text-2xl font-bold text-neutral-900">Tenants & Seekers</h3>
+            </div>
+            <ul class="space-y-6">
+              <li class="flex gap-4 items-start">
+                  <span class="w-6 h-6 rounded-full bg-neutral-200 text-neutral-600 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+                <span class="text-neutral-600 font-medium leading-snug">Process for finding and booking rentals?</span>
+              </li>
+              <li class="flex gap-4 items-start">
+                  <span class="w-6 h-6 rounded-full bg-neutral-200 text-neutral-600 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+                <span class="text-neutral-600 font-medium leading-snug">Frustrations with searching online?</span>
+              </li>
+              <li class="flex gap-4 items-start">
+                  <span class="w-6 h-6 rounded-full bg-neutral-200 text-neutral-600 text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+                <span class="text-neutral-600 font-medium leading-snug">Communication methods with landlords?</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fade-in-section delay-300 bg-neutral-900 rounded-4xl p-10 md:p-16 text-white relative overflow-hidden">
+           <div class="absolute top-0 right-0 w-96 h-96 bg-neutral-800 rounded-full blur-[100px] -mr-20 -mt-20 opacity-40"></div>
+           <h3 class="text-3xl font-bold mb-10 relative z-10">Key Insights</h3>
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
+              <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-3xl border border-neutral-700/50 hover:bg-neutral-800 transition-colors">
+                <div class="flex gap-4">
+                   <span class="text-neutral-500 font-bold">01</span>
+                   <p class="text-neutral-200 font-medium leading-relaxed">Social media is primary but messy for owners.</p>
+                </div>
+              </div>
+              <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-3xl border border-neutral-700/50 hover:bg-neutral-800 transition-colors">
+                <div class="flex gap-4">
+                   <span class="text-neutral-500 font-bold">02</span>
+                   <p class="text-neutral-200 font-medium leading-relaxed">Lack of tenant orientation leads to uncertainty.</p>
+                </div>
+              </div>
+              <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-3xl border border-neutral-700/50 hover:bg-neutral-800 transition-colors">
+                <div class="flex gap-4">
+                   <span class="text-neutral-500 font-bold">03</span>
+                   <p class="text-neutral-200 font-medium leading-relaxed">Maintenance requests are hard to track.</p>
+                </div>
+              </div>
+              <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-3xl border border-neutral-700/50 hover:bg-neutral-800 transition-colors">
+                <div class="flex gap-4">
+                   <span class="text-neutral-500 font-bold">04</span>
+                   <p class="text-neutral-200 font-medium leading-relaxed">Onboarding and move-out are manual chaos.</p>
+                </div>
+              </div>
+              <div class="p-6 bg-neutral-800/50 backdrop-blur-sm rounded-3xl border border-neutral-700/50 hover:bg-neutral-800 transition-colors">
+                <div class="flex gap-4">
+                   <span class="text-neutral-500 font-bold">05</span>
+                   <p class="text-neutral-200 font-medium leading-relaxed">Disjointed platforms for booking vs managing.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quantitative Research -->
+      <section class="py-24 px-6 max-w-screen-xl mx-auto bg-white">
+        <div class="fade-in-section mb-24">
+          <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-neutral-900">
+            Quantitative Research <span class="text-neutral-300">-</span> User Survey
+          </h2>
+          <p class="text-xl text-neutral-500 font-medium max-w-3xl">
+             We did an online survey to find any pattern or what the potential user wants using Google Forms.
+          </p>
+        </div>
+
+        <div class="mb-32">
+          <div class="fade-in-section">
+             <div class="relative inline-block mb-8">
+                <div class="absolute inset-0 bg-red-100 transform -skew-x-12 rounded-lg translate-y-2 -z-10 w-[95%] mx-auto"></div>
+                <h3 class="relative text-3xl md:text-4xl font-extrabold text-neutral-900 z-10">
+                  Tenants and people looking for next home to stay
+                </h3>
+             </div>
+             <p class="text-neutral-500 font-bold mb-12 text-lg">
+               A total of 37 potential tenants or people searching for next home responded which helped us validate our ideas.
+             </p>
+          </div>
+          
+          <div class="space-y-8">
+             <!-- Chart 1 -->
+             <div class="fade-in-section delay-100 bg-white p-8 md:p-12 rounded-4xl border border-neutral-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                <div class="flex-1 w-full md:order-1">
+                  <h4 class="text-lg md:text-xl font-bold text-neutral-700 mb-8 leading-tight max-w-2xl">
+                    How satisfied are you with the existing online platforms for finding rental properties? Very Easy | Easy | Neutral | Difficult | Very Difficult
+                  </h4>
+                  <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #F4A261"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Very Easy</span><span class="text-xl font-extrabold text-neutral-900 leading-none">2 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #E9C46A"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Easy</span><span class="text-xl font-extrabold text-neutral-900 leading-none">6 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #2A9D8F"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Difficult</span><span class="text-xl font-extrabold text-neutral-900 leading-none">35 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #264653"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Very Difficult</span><span class="text-xl font-extrabold text-neutral-900 leading-none">41 %</span></div></div>
+                  </div>
+                </div>
+                <div class="flex-shrink-0 md:order-2">
+                   <div class="relative w-32 h-32 md:w-48 md:h-48 flex-shrink-0">
+                      <div class="w-full h-full rounded-full" style="background: conic-gradient(#F4A261 0% 2%, #E9C46A 2% 8%, #2A9D8F 8% 43%, #264653 43% 84%, #f3f4f6 84% 100%)"></div>
+                      <div class="absolute inset-8 md:inset-12 bg-white rounded-full shadow-inner"></div>
+                   </div>
+                </div>
+             </div>
+             
+             <!-- Chart 2 -->
+             <div class="fade-in-section delay-200 bg-white p-8 md:p-12 rounded-4xl border border-neutral-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                <div class="flex-1 w-full md:order-2">
+                  <h4 class="text-lg md:text-xl font-bold text-neutral-700 mb-8 leading-tight max-w-2xl">
+                    How satisfied are you with the current process of communicating with your landlord or property manager regarding maintenance requests and concerns?
+                  </h4>
+                  <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #F4A261"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Very Satisfied</span><span class="text-xl font-extrabold text-neutral-900 leading-none">4 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #E9C46A"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Satisfied</span><span class="text-xl font-extrabold text-neutral-900 leading-none">8 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #2A9D8F"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Unsatisfied</span><span class="text-xl font-extrabold text-neutral-900 leading-none">56 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #264653"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Very Unsatisfied</span><span class="text-xl font-extrabold text-neutral-900 leading-none">32 %</span></div></div>
+                  </div>
+                </div>
+                <div class="flex-shrink-0 md:order-1">
+                   <div class="relative w-32 h-32 md:w-48 md:h-48 flex-shrink-0">
+                      <div class="w-full h-full rounded-full" style="background: conic-gradient(#F4A261 0% 4%, #E9C46A 4% 12%, #2A9D8F 12% 68%, #264653 68% 100%)"></div>
+                      <div class="absolute inset-8 md:inset-12 bg-white rounded-full shadow-inner"></div>
+                   </div>
+                </div>
+             </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="fade-in-section">
+             <div class="relative inline-block mb-8">
+                <div class="absolute inset-0 bg-orange-100 transform -skew-x-12 rounded-lg translate-y-2 -z-10 w-[105%]"></div>
+                <h3 class="relative text-3xl md:text-4xl font-extrabold text-neutral-900 z-10">
+                  Property Owners
+                </h3>
+             </div>
+             <p class="text-neutral-500 font-bold mb-12 text-lg">
+               A total of 42 potential property owners responded which helped us validate our ideas.
+             </p>
+          </div>
+
+          <div class="space-y-8 mb-8">
+             <!-- Chart 3 -->
+             <div class="fade-in-section delay-100 bg-white p-8 md:p-12 rounded-4xl border border-neutral-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                <div class="flex-1 w-full md:order-1">
+                  <h4 class="text-lg md:text-xl font-bold text-neutral-700 mb-8 leading-tight max-w-2xl">
+                    How challenging is the current process of listing properties for rent and managing tenants?
+                  </h4>
+                  <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #F4A261"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Very Easy</span><span class="text-xl font-extrabold text-neutral-900 leading-none">2 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #E9C46A"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Easy</span><span class="text-xl font-extrabold text-neutral-900 leading-none">6 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #2A9D8F"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Difficult</span><span class="text-xl font-extrabold text-neutral-900 leading-none">35 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #264653"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Very Difficult</span><span class="text-xl font-extrabold text-neutral-900 leading-none">41 %</span></div></div>
+                  </div>
+                </div>
+                <div class="flex-shrink-0 md:order-2">
+                   <div class="relative w-32 h-32 md:w-48 md:h-48 flex-shrink-0">
+                      <div class="w-full h-full rounded-full" style="background: conic-gradient(#F4A261 0% 2%, #E9C46A 2% 8%, #2A9D8F 8% 43%, #264653 43% 84%, #f3f4f6 84% 100%)"></div>
+                      <div class="absolute inset-8 md:inset-12 bg-white rounded-full shadow-inner"></div>
+                   </div>
+                </div>
+             </div>
+             <!-- Chart 4 -->
+             <div class="fade-in-section delay-200 bg-white p-8 md:p-12 rounded-4xl border border-neutral-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row items-center gap-8 md:gap-16">
+                <div class="flex-1 w-full md:order-2">
+                  <h4 class="text-lg md:text-xl font-bold text-neutral-700 mb-8 leading-tight max-w-2xl">
+                    How satisfied are you with the existing tools and methods for onboarding tenants and addressing their needs?
+                  </h4>
+                  <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 gap-x-4">
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #F4A261"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Very Satisfied</span><span class="text-xl font-extrabold text-neutral-900 leading-none">4 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #E9C46A"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Satisfied</span><span class="text-xl font-extrabold text-neutral-900 leading-none">8 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #2A9D8F"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Unsatisfied</span><span class="text-xl font-extrabold text-neutral-900 leading-none">56 %</span></div></div>
+                      <div class="flex gap-3"><div class="w-1.5 h-10 rounded-full flex-shrink-0" style="background-color: #264653"></div><div class="flex flex-col justify-between py-0.5"><span class="text-xs font-bold text-neutral-400 uppercase tracking-wide leading-none mb-1.5">Very Unsatisfied</span><span class="text-xl font-extrabold text-neutral-900 leading-none">32 %</span></div></div>
+                  </div>
+                </div>
+                <div class="flex-shrink-0 md:order-1">
+                   <div class="relative w-32 h-32 md:w-48 md:h-48 flex-shrink-0">
+                      <div class="w-full h-full rounded-full" style="background: conic-gradient(#F4A261 0% 4%, #E9C46A 4% 12%, #2A9D8F 12% 68%, #264653 68% 100%)"></div>
+                      <div class="absolute inset-8 md:inset-12 bg-white rounded-full shadow-inner"></div>
+                   </div>
+                </div>
+             </div>
+          </div>
+
+          <div class="fade-in-section delay-400 bg-white p-10 rounded-4xl border border-neutral-100 shadow-sm flex flex-col md:flex-row items-center gap-8 mb-16">
+             <div class="flex-1">
+                <h4 class="text-xl font-bold text-neutral-600 mb-2 leading-relaxed">
+                  How much time, on average, do you spend per week manually managing tenant-related tasks and property maintenance?
+                </h4>
+             </div>
+            <div class="flex items-center gap-5 flex-shrink-0">
+               <div class="w-1.5 h-20 bg-red-300 rounded-full"></div>
+               <div>
+                 <p class="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-1">Avg. hours in a week</p>
+                 <p class="text-5xl font-extrabold text-neutral-900 tracking-tight">4.1 Hours</p>
+               </div>
+            </div>
+          </div>
+
+          <div class="fade-in-section delay-500 bg-[#373737] p-10 md:p-16 rounded-4xl relative overflow-hidden text-white shadow-2xl">
+             <div class="absolute top-0 right-0 pointer-events-none opacity-20">
+               <div class="w-64 h-64 border border-white rounded-full absolute -top-32 -right-32"></div>
+               <div class="w-80 h-80 border border-white rounded-full absolute -top-40 -right-40"></div>
+               <div class="w-96 h-96 border border-white rounded-full absolute -top-48 -right-48"></div>
+               <div class="w-[28rem] h-[28rem] border border-white rounded-full absolute -top-56 -right-56"></div>
+            </div>
+            <div class="relative mb-12 inline-block">
+               <div class="absolute -left-5 -top-3 w-20 h-20 bg-neutral-500 rounded-full opacity-40 mix-blend-overlay"></div>
+               <h3 class="relative text-4xl md:text-5xl font-extrabold z-10 tracking-tight">Key Insights</h3>
+            </div>
+            <div class="space-y-8 relative z-10 max-w-4xl">
+              <div class="flex gap-6 items-start"><span class="text-2xl font-bold opacity-40">1.</span><p class="text-lg md:text-xl font-medium leading-relaxed">There is a need for an all-in-one rental marketplace and system for property and booking management.</p></div>
+              <div class="flex gap-6 items-start"><span class="text-2xl font-bold opacity-40">2.</span><p class="text-lg md:text-xl font-medium leading-relaxed">The booking process is manual and time-consuming.</p></div>
+              <div class="flex gap-6 items-start"><span class="text-2xl font-bold opacity-40">3.</span><p class="text-lg md:text-xl font-medium leading-relaxed">There is a need for a maintenance request and management system, online payment system, and communication system for tenants.</p></div>
+              <div class="flex gap-6 items-start"><span class="text-2xl font-bold opacity-40">4.</span><p class="text-lg md:text-xl font-medium leading-relaxed">There is a need for easy access to more accurate information on rental properties and tenants.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- User Personas -->
+      <section class="py-32 px-6 max-w-screen-xl mx-auto" id="personas">
+        <div class="fade-in-section mb-20">
+          <div class="inline-block relative mb-6">
+             <div class="absolute bottom-1 left-0 w-full h-3 bg-red-200/50 -z-10 rounded-full"></div>
+             <h2 class="text-5xl md:text-6xl font-extrabold tracking-tight text-neutral-900">User Personas</h2>
+          </div>
+          <p class="text-xl text-neutral-500 font-medium max-w-4xl leading-relaxed">
+            I used data from interviews and surveys to craft an ideal user persona for two user groups, which provided deeper insights into user goals, frustrations, and overall personality, leading to improved solutions.
+          </p>
+        </div>
+
+        <!-- Cynthia -->
+        <div class="fade-in-section bg-neutral-50 rounded-[3rem] p-8 md:p-12 mb-12 border border-neutral-100">
+          <div class="flex flex-col lg:flex-row gap-12 md:gap-16">
+            <div class="flex-shrink-0 lg:w-1/4 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div class="w-48 h-48 rounded-full overflow-hidden mb-8 border-4 border-white shadow-xl mx-auto lg:mx-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Cynthia P. Cinnamon" class="w-full h-full object-cover" />
+              </div>
+              <h3 class="text-2xl font-extrabold text-neutral-900 mb-8">Cynthia P. Cinnamon</h3>
+              <div class="space-y-5 w-full">
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg></div><span>Age: 40 Years</span></div>
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><span>Gender: Female</span></div>
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><span>Married</span></div>
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><span>Bachelor's Degree</span></div>
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><span>Montclair, NJ</span></div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <blockquote class="text-xl md:text-2xl font-bold text-neutral-900 mb-10 leading-relaxed">"I want a platform that makes it easy to connect with tenants, manage repairs smoothly, and handle properties more efficiently in my property management work."</blockquote>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+                <div>
+                  <h4 class="text-lg font-extrabold text-neutral-900 mb-6 flex items-center gap-2">Goals</h4>
+                  <ul class="space-y-3">
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 flex-shrink-0"></span>Simplify the process of listing properties for rent and managing tenants.</li>
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 flex-shrink-0"></span>Reduce time spent on handling tenant inquiries and incoming calls.</li>
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 flex-shrink-0"></span>Minimize uncertainties during tenant onboarding and move-out procedures.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-lg font-extrabold text-neutral-900 mb-6 flex items-center gap-2">Frustrations</h4>
+                  <ul class="space-y-3">
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>Struggles to manage the influx of calls and inquiries, even after properties are booked.</li>
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>Faces issues with tenant screening, leading to potential disruptions.</li>
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>Finds it challenging to manage property repair needs.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-2xl border border-neutral-100">
+                <p class="text-neutral-500 font-medium leading-relaxed text-sm md:text-base">Cynthia is a 40-year-old professional and a property owner who manages multiple rental properties in her city. She works in marketing and has a keen interest in technology. She's been using social media platforms to list her properties for rent and is looking for ways to streamline her property management process.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- John -->
+        <div class="fade-in-section delay-200 bg-neutral-50 rounded-[3rem] p-8 md:p-12 mb-12 border border-neutral-100">
+          <div class="flex flex-col lg:flex-row gap-12 md:gap-16">
+            <div class="flex-shrink-0 lg:w-1/4 flex flex-col items-center lg:items-start text-center lg:text-left">
+               <div class="w-48 h-48 rounded-full overflow-hidden mb-8 border-4 border-white shadow-xl mx-auto lg:mx-0">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="John Cassius" class="w-full h-full object-cover" />
+              </div>
+              <h3 class="text-2xl font-extrabold text-neutral-900 mb-8">John Cassius</h3>
+              <div class="space-y-5 w-full">
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v2"/><path d="M12 8v2"/><path d="M17 8v2"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg></div><span>Age: 28 Years</span></div>
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><span>Gender: Male</span></div>
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div><span>Married</span></div>
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><span>Master's Degree</span></div>
+                 <div class="flex items-center gap-4 text-neutral-600 text-sm font-bold"><div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-red-400 shadow-sm flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><span>New York, NY</span></div>
+              </div>
+            </div>
+            <div class="flex-1">
+               <blockquote class="text-xl md:text-2xl font-bold text-neutral-900 mb-10 leading-relaxed">"As someone actively in search of a new rental property, I truly value efficiency and convenience in my daily life. My quest is to find a rental experience that's seamlessly tailored to my needs."</blockquote>
+               <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+                <div>
+                  <h4 class="text-lg font-extrabold text-neutral-900 mb-6 flex items-center gap-2">Goals</h4>
+                  <ul class="space-y-3">
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 flex-shrink-0"></span>Find a suitable rental property quickly and easily.</li>
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 flex-shrink-0"></span>Experience a transparent and streamlined tenant onboarding process.</li>
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-neutral-400 mt-2 flex-shrink-0"></span>Have an efficient mechanism for reporting and managing property repairs.</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-lg font-extrabold text-neutral-900 mb-6 flex items-center gap-2">Frustrations</h4>
+                  <ul class="space-y-3">
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>Struggles to report and manage property repairs promptly.</li>
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>Finds the manual tenant onboarding and move-out processes to be challenging.</li>
+                    <li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>Frustrated by the disjointed platforms for booking properties.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-2xl border border-neutral-100">
+                <p class="text-neutral-500 font-medium leading-relaxed text-sm md:text-base">John is a 28-year-old professional working in the IT industry. He is a tech-savvy individual who is actively looking for a new rental property to move into. He values efficiency and convenience in his daily life and seeks a seamless renting experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Empathy Mapping -->
+      <section class="py-32 px-6 max-w-screen-xl mx-auto" id="empathy-mapping">
+        <div class="fade-in-section mb-24">
+          <div class="inline-block relative mb-6">
+             <div class="absolute bottom-1 left-0 w-full h-3 bg-red-200/50 -z-10 rounded-full"></div>
+             <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-neutral-900">Empathy Mapping</h2>
+          </div>
+          <p class="text-xl text-neutral-500 font-medium max-w-4xl leading-relaxed">
+            I used empathy mapping to define the target audience clearly, for property owners and users searching for properties to rent, showcasing their needs and actions by gaining insights into their thoughts and feelings through user interviews.
+          </p>
+        </div>
+
+        <!-- Cynthia Empathy -->
+        <div class="relative mb-32">
+          <div class="fade-in-section relative max-w-4xl mx-auto">
+              <div class="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                  <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Cynthia" class="w-full h-full object-cover" />
+                  </div>
+              </div>
+              <div class="md:hidden flex justify-center mb-8">
+                  <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Cynthia" class="w-full h-full object-cover" />
+                  </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="bg-[#FFF5F5] p-10 rounded-[2.5rem] md:rounded-br-[5rem] min-h-[300px] flex flex-col"><h3 class="text-xl font-extrabold text-neutral-900 mb-6">Says</h3><ul class="space-y-3"><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-300 mt-2 flex-shrink-0"></span>Managing tenant inquiries is overwhelming and time-consuming.</li><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-300 mt-2 flex-shrink-0"></span>I wish there was a clear process to welcome new tenants to my properties.</li></ul></div>
+                  <div class="bg-[#ECFEFF] p-10 rounded-[2.5rem] md:rounded-bl-[5rem] min-h-[300px] flex flex-col"><h3 class="text-xl font-extrabold text-neutral-900 mb-6">Thinks</h3><ul class="space-y-3"><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-cyan-300 mt-2 flex-shrink-0"></span>I need a solution to streamline property management tasks.</li><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-cyan-300 mt-2 flex-shrink-0"></span>An integrated platform could simplify tenant communication and repairs.</li></ul></div>
+                  <div class="bg-[#FFFBEB] p-10 rounded-[2.5rem] md:rounded-tr-[5rem] min-h-[300px] flex flex-col"><h3 class="text-xl font-extrabold text-neutral-900 mb-6">Feels</h3><ul class="space-y-3"><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-amber-300 mt-2 flex-shrink-0"></span>Frustrated by the constant flow of incoming calls and inquiries.</li><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-amber-300 mt-2 flex-shrink-0"></span>Uncertainty about the tenant orientation process bothers her.</li></ul></div>
+                  <div class="bg-[#F0FDF4] p-10 rounded-[2.5rem] md:rounded-tl-[5rem] min-h-[300px] flex flex-col"><h3 class="text-xl font-extrabold text-neutral-900 mb-6">Does</h3><ul class="space-y-3"><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-emerald-300 mt-2 flex-shrink-0"></span>Uses social media platforms to list properties for rent.</li><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-emerald-300 mt-2 flex-shrink-0"></span>Spends valuable time on managing calls, even after a property is booked.</li></ul></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="w-32 h-1 bg-gradient-to-r from-red-200 to-orange-200 rounded-full mx-auto my-20"></div>
+
+        <!-- John Empathy -->
+        <div class="relative">
+          <div class="fade-in-section delay-200 relative max-w-4xl mx-auto">
+              <div class="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                  <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="John" class="w-full h-full object-cover" />
+                  </div>
+              </div>
+              <div class="md:hidden flex justify-center mb-8">
+                  <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="John" class="w-full h-full object-cover" />
+                  </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="bg-[#FFF5F5] p-10 rounded-[2.5rem] md:rounded-br-[5rem] min-h-[300px] flex flex-col"><h3 class="text-xl font-extrabold text-neutral-900 mb-6">Says</h3><ul class="space-y-3"><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-300 mt-2 flex-shrink-0"></span>I wish there was a clear process for moving into a new rental.</li><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-red-300 mt-2 flex-shrink-0"></span>I worry about unreliable screening leading to disruptive neighbors.</li></ul></div>
+                  <div class="bg-[#ECFEFF] p-10 rounded-[2.5rem] md:rounded-bl-[5rem] min-h-[300px] flex flex-col"><h3 class="text-xl font-extrabold text-neutral-900 mb-6">Thinks</h3><ul class="space-y-3"><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-cyan-300 mt-2 flex-shrink-0"></span>I need a convenient way to find a rental property quickly.</li><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-cyan-300 mt-2 flex-shrink-0"></span>A structured move-in process would make me feel more comfortable.</li></ul></div>
+                  <div class="bg-[#FFFBEB] p-10 rounded-[2.5rem] md:rounded-tr-[5rem] min-h-[300px] flex flex-col"><h3 class="text-xl font-extrabold text-neutral-900 mb-6">Feels</h3><ul class="space-y-3"><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-amber-300 mt-2 flex-shrink-0"></span>Overwhelmed by the volume of calls and inquiries from landlords.</li><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-amber-300 mt-2 flex-shrink-0"></span>Anxious about the uncertainties when moving into a new rental.</li></ul></div>
+                  <div class="bg-[#F0FDF4] p-10 rounded-[2.5rem] md:rounded-tl-[5rem] min-h-[300px] flex flex-col"><h3 class="text-xl font-extrabold text-neutral-900 mb-6">Does</h3><ul class="space-y-3"><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-emerald-300 mt-2 flex-shrink-0"></span>Utilizes social media platforms to search for available rental properties.</li><li class="flex gap-3 text-neutral-600 text-sm font-medium leading-relaxed"><span class="block w-1.5 h-1.5 rounded-full bg-emerald-300 mt-2 flex-shrink-0"></span>Struggles with managing incoming calls and inquiries from landlords.</li></ul></div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+     
+        
+         
+        
+
+      <!-- Information Architecture -->
+      <section class="py-32 px-6 max-w-screen-xl mx-auto" id="ia">
+        <div class="fade-in-section mb-24">
+           <div class="w-16 h-1.5 bg-gradient-to-r from-red-400 to-orange-400 rounded-full mb-6"></div>
+           <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight text-neutral-900 mb-6">Information Architecture</h2>
+        </div>
+        
+        <div class="fade-in-section delay-100">
+          <div class="overflow-x-auto pb-12 -mx-6 px-6 md:overflow-visible md:mx-0 md:px-0">
+             
+             <!-- Marketplace Tree -->
+             <div class="flex flex-col items-center mb-24 min-w-[900px]">
+                <!-- Root Node -->
+                <div class="bg-[#E11D48] text-white font-bold text-lg py-3 px-10 rounded-xl shadow-md mb-8 relative z-20">
+                  Marketplace
+                </div>
+                <!-- Vertical line from root -->
+                <div class="h-8 w-px bg-neutral-300 -mt-8 mb-0 relative z-0"></div>
+                
+                <!-- Horizontal Bar Wrapper -->
+                <div class="flex justify-center w-full relative">
+                   
+                   <!-- Col 1 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-0"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Home page</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Search</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Featured listing</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Benefits</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Contact Us</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 2 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Property listing</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Search</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Filter & sort</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Map view</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Property Details</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 3 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Rental solution</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">About Us</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Pricing Plans</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Help & FAQs</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 4 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Manage Rental</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Pricing plans</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Purchase process</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 5 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Profile/login</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Create account</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">My booking request</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Booking History</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 6 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-0"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Contact us</div>
+                         <!-- No children -->
+                      </div>
+                   </div>
+
+                </div>
+             </div>
+
+             <!-- Management Tree -->
+             <div class="flex flex-col items-center mb-24 min-w-[900px]">
+                <!-- Root Node -->
+                <div class="bg-[#E11D48] text-white font-bold text-lg py-3 px-10 rounded-xl shadow-md mb-8 relative z-20">
+                  Tenant & Property Management
+                </div>
+                <!-- Vertical line from root -->
+                <div class="h-8 w-px bg-neutral-300 -mt-8 mb-0 relative z-0"></div>
+                
+                <!-- Horizontal Bar Wrapper -->
+                <div class="flex justify-center w-full relative">
+                   
+                   <!-- Col 1 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-0"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Dashboard</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Tenant Overview</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Payment Overview</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Property Overview</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Notifications</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 2 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Properties</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Search</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Filter & sort</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Add Properties</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 3 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Payment</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Invoice Listing</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Search & Filters</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Add Invoice</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 4 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Maintenance</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Requests</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Search & filters</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Updates Status</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 5 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Booking Request</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Screen Requests</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Confirm Booking</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Booking History</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Search & Filters</div>
+                         </div>
+                      </div>
+                   </div>
+
+                   <!-- Col 6 -->
+                   <div class="flex-1 flex flex-col items-center relative px-2">
+                      <div class="w-full h-8 absolute top-0 left-0">
+                         <div class="absolute top-0 right-1/2 h-px bg-neutral-300 w-1/2 opacity-100"></div>
+                         <div class="absolute top-0 left-1/2 h-px bg-neutral-300 w-1/2 opacity-0"></div>
+                         <div class="absolute top-0 left-1/2 h-8 w-px bg-neutral-300 -translate-x-1/2"></div>
+                         <div class="absolute top-8 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-neutral-300"></div>
+                      </div>
+                      <div class="h-10 w-full"></div>
+                      <div class="w-full flex flex-col items-center">
+                         <div class="w-full bg-[#FFF1F2] border border-[#FDA4AF] text-[#BE123C] font-bold text-xs md:text-sm py-3 px-2 md:px-4 rounded-xl shadow-sm mb-2 text-center relative z-10">Tenants</div>
+                         <div class="flex flex-col items-center w-full">
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Tenants listing</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Onboarding</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Tenant Details</div>
+                            <div class="h-3 w-px bg-neutral-300"></div><div class="w-0 h-0 border-l-[3px] border-l-transparent border-r-[3px] border-r-transparent border-t-[5px] border-t-neutral-300 mb-1"></div><div class="w-full bg-neutral-100 text-neutral-600 font-medium text-xs md:text-sm py-3 px-3 rounded-xl mb-1 text-center shadow-sm">Search & Filters</div>
+                         </div>
+                      </div>
+                   </div>
+
+                </div>
+             </div>
+             
+          </div>
+        </div>
+      </section>
+
+      <!-- Style Guide -->
+      <section class="py-32 px-6 bg-neutral-900 text-white rounded-t-[3rem] mt-20">
+        <div class="max-w-screen-xl mx-auto">
+          <div class="fade-in-section mb-24 flex items-center justify-between">
+             <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight">Design System</h2>
+             <span class="px-4 py-2 rounded-full border border-neutral-700 bg-neutral-800 text-sm font-bold">Mini Style Guide</span>
+          </div>
+
+          <div class="fade-in-section grid grid-cols-1 lg:grid-cols-2 gap-24">
+            <!-- Typography -->
+            <div>
+              <h3 class="text-sm uppercase tracking-widest text-neutral-500 mb-12 font-bold">Typography</h3>
+              <div class="space-y-12">
+                <div class="p-8 bg-neutral-800 rounded-3xl border border-neutral-700">
+                  <span class="text-8xl font-extrabold block mb-4 text-white tracking-tighter">Aa</span>
+                  <p class="text-2xl font-bold text-neutral-200">Plus Jakarta Sans</p>
+                  <p class="text-neutral-500 font-medium">Extra Bold / Bold / Medium</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colors -->
+            <div>
+              <h3 class="text-sm uppercase tracking-widest text-neutral-500 mb-12 font-bold">Color Palette</h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-2 group">
+                  <div class="h-32 w-full bg-[#030712] rounded-3xl border border-neutral-700 shadow-lg group-hover:scale-[1.02] transition-transform"></div>
+                  <div class="flex justify-between text-sm px-2">
+                    <span class="text-neutral-300 font-bold">Deep Black</span>
+                    <span class="text-neutral-500">#030712</span>
+                  </div>
+                </div>
+                <div class="space-y-2 group">
+                  <div class="h-32 w-full bg-white rounded-3xl shadow-lg group-hover:scale-[1.02] transition-transform"></div>
+                  <div class="flex justify-between text-sm px-2">
+                    <span class="text-neutral-300 font-bold">White</span>
+                    <span class="text-neutral-500">#FFFFFF</span>
+                  </div>
+                </div>
+                <div class="space-y-2 group">
+                  <div class="h-32 w-full bg-[#D7385E] rounded-3xl border border-neutral-700 group-hover:scale-[1.02] transition-transform"></div>
+                  <div class="flex justify-between text-sm px-2">
+                    <span class="text-neutral-300 font-bold">Pink Red</span>
+                    <span class="text-neutral-500">#D7385E</span>
+                  </div>
+                </div>
+                <div class="space-y-2 group">
+                  <div class="h-32 w-full bg-neutral-500 rounded-3xl border border-neutral-700 group-hover:scale-[1.02] transition-transform"></div>
+                  <div class="flex justify-between text-sm px-2">
+                    <span class="text-neutral-300 font-bold">Neutral</span>
+                    <span class="text-neutral-500">#6B7280</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Visuals -->
+      <section class="py-32 px-6 max-w-screen-xl mx-auto" id="visuals">
+         <div class="fade-in-section text-center mb-24">
+             <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-neutral-900">Visual Design</h2>
+             <p class="text-neutral-500 max-w-2xl mx-auto text-xl font-medium">From skeletal blueprints to polished interfaces.</p>
+         </div>
+
+       
+
+         <!-- High Fidelity -->
+         <div class="mb-40">
+           <div class="fade-in-section mb-20 border-l-4 border-blue-500 pl-6">
+               <h3 class="text-3xl md:text-4xl font-extrabold text-neutral-900 tracking-tight mb-4">High Fidelity Screens</h3>
+               <p class="text-neutral-500 max-w-2xl text-lg font-medium leading-relaxed">Polished designs incorporating the design system, ensuring accessibility and visual consistency across the web platform.</p>
+           </div>
+
+           <div class="space-y-24">
+             <!-- Web Screen 1 -->
+             <div class="fade-in-section bg-neutral-900 p-4 md:p-8 rounded-[2rem] shadow-2xl group cursor-pointer">
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-neutral-200 aspect-[16/10] relative transition-transform duration-700 group-hover:scale-[1.01]">
+                   <div class="h-10 bg-neutral-50 border-b border-neutral-200 flex items-center px-4 gap-2">
+                      <div class="flex gap-1.5"><div class="w-3 h-3 rounded-full bg-red-400"></div><div class="w-3 h-3 rounded-full bg-yellow-400"></div><div class="w-3 h-3 rounded-full bg-green-400"></div></div>
+                      <div class="flex-1 mx-4 bg-white h-6 rounded-md border border-neutral-200 text-[10px] flex items-center px-2 text-neutral-400 font-medium">https://app.newrentals.com/dashboard/overview</div>
+                   </div>
+                   <div class="w-full h-full relative">
+                      <img src="images/highsearch.png" alt="High Fidelity Web Dashboard" class="w-full h-full object-cover object-top" />
+                   </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <h4 class="text-2xl font-bold text-white">Rental Marketplace Searh</h4>
+                    <p class="text-neutral-400 font-medium">Advanced search and filtering for prospective tenants</p>
+                </div>
+             </div>
+
+             <!-- Web Screen 2 -->
+             <div class="fade-in-section delay-200 bg-neutral-900 p-4 md:p-8 rounded-[2rem] shadow-2xl group cursor-pointer">
+                <div class="bg-neutral-800 rounded-xl overflow-hidden shadow-sm border border-neutral-700 aspect-[16/10] relative transition-transform duration-700 group-hover:scale-[1.01]">
+                   <div class="h-10 bg-neutral-800 border-b border-neutral-700 flex items-center px-4 gap-2">
+                      <div class="flex gap-1.5"><div class="w-3 h-3 rounded-full bg-red-400"></div><div class="w-3 h-3 rounded-full bg-yellow-400"></div><div class="w-3 h-3 rounded-full bg-green-400"></div></div>
+                      <div class="flex-1 mx-4 bg-neutral-900 h-6 rounded-md border border-neutral-700 text-[10px] flex items-center px-2 text-neutral-500 font-medium">https://newrentals.com/explore</div>
+                   </div>
+                   <div class="w-full h-full relative">
+                      <img src="images/admin.png" alt="High Fidelity Marketplace" class="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity" />
+                   </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <h4 class="text-2xl font-bold text-white">Admin View</h4>
+                    <p class="text-neutral-400 font-medium">Comprehensive overview of properties, income, and tenant requests.</p>
+                </div>
+             </div>
+           </div>
+         </div>
+
+         <!-- Conclusion -->
+         <div class="fade-in-section bg-neutral-50 rounded-[3rem] p-10 md:p-20 border border-neutral-100">
+            <h3 class="text-4xl font-extrabold text-neutral-900 mb-12 tracking-tight">Conclusion</h3>
+            <div class="space-y-8 text-lg md:text-xl text-neutral-600 font-medium leading-relaxed max-w-4xl">
+              <p>The NewRentals project aimed to improve real estate property management and rentals by creating an all-in-one system. This platform was designed for people looking to rent homes and for property owners wanting to list their rentals. Using modern technology and user-friendly design, the project sought to simplify the rental process and make it better for everyone involved.</p>
+              <p>The project created a rental marketplace with easy property searches, simple management for owners, automated rental processes, smooth tenant onboarding, efficient tenant management tools, and added features like online payments, background checks, and maintenance scheduling.</p>
+              <p>The project dealt with technical challenges like ensuring compatibility, scalability, and performance, while also managing time, budget, and skilled personnel limitations. Ensuring data privacy and meeting regulations were crucial, and integrating third-party services had its own challenges. Despite competition, NewRentals focused on unique features and following local regulations to succeed.</p>
+              <p>The successful completion of the NewRentals project marked a big improvement in real estate management. By meeting the needs of both property owners and renters, the platform's automation, smooth tenant onboarding, and combined management tools made the rental process more efficient, transparent, and satisfying for users.</p>
+            </div>
+         </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-neutral-100 py-24 px-6">
+      <div class="max-w-screen-xl mx-auto flex flex-col items-center justify-center text-center">
+        <h2 class="text-4xl font-extrabold mb-12 text-neutral-900 tracking-tight">Thanks for scrolling.</h2>
+        <div class="flex gap-4 mb-16">
+          <a href="https://www.behance.net/jurme" class="px-6 py-3 rounded-full bg-neutral-100 text-neutral-900 font-bold hover:bg-neutral-200 transition-colors">Behance</a>
+          <a href="https://dribbble.com/Jurme" class="px-6 py-3 rounded-full bg-neutral-100 text-neutral-900 font-bold hover:bg-neutral-200 transition-colors">Dribbble</a>
+          <a href="https://www.linkedin.com/in/jurme-tenzin-299892137/" class="px-6 py-3 rounded-full bg-neutral-100 text-neutral-900 font-bold hover:bg-neutral-200 transition-colors">LinkedIn</a>
+        </div>
+        <p class="text-neutral-400 text-sm font-medium">© 2024 NewRentals Case Study</p>
+      </div>
+    </footer>
+
+    <!-- Animation Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+          observer.observe(section);
+        });
+      });
+    </script>
+  </body>
+</html>

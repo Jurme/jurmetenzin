@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallaflex UX Case Study</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            colors: {
+              primary: '#111827',
+              secondary: '#4B5563',
+              accent: '#171717', // Neutral Black
+              surface: '#FFFFFF',
+              'surface-alt': '#F9FAFB',
+            },
+            borderRadius: {
+              '3xl': '1.5rem',
+              '4xl': '2rem',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+  <body class="text-gray-900 antialiased selection:bg-gray-900 selection:text-white overflow-x-hidden">
+
+    <!-- Navbar (Simple) -->
+    <nav class="fixed top-6 left-0 w-full z-50 px-6 pointer-events-none">
+      <div class="max-w-screen-xl mx-auto flex justify-between items-center pointer-events-auto">
+        <a href="index.html" class="bg-white/90 backdrop-blur-xl border border-neutral-200 text-sm font-bold px-5 py-3 rounded-full hover:bg-neutral-50 hover:scale-105 transition-all flex items-center gap-2 shadow-sm text-neutral-900">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          <span>Back</span>
+        </a>
+        
+        <div class="bg-black text-white px-5 py-3 rounded-full font-bold text-sm shadow-lg hover:scale-105 transition-transform cursor-pointer" >
+          <a href="Newrentals.html" 
+          <span> Next Project</span>   
+             </a>     
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-12 px-4 md:pt-40 md:pb-20 md:px-12 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:items-start mb-12">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 border border-gray-200 text-gray-900 font-bold text-xs md:text-sm mb-6 md:mb-8 w-fit">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-gray-900"></span>
+            </span>
+            UX CASE STUDY
+          </div>
+          <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.1] text-gray-900 mb-6 md:mb-8">
+            Reimagining the <br/><span class="text-gray-400 italic">Art Gallery</span> Experience
+          </h1>
+          <p class="text-lg md:text-2xl text-gray-500 max-w-2xl font-medium leading-relaxed">
+            Gallaflex streamlines exhibition discovery and check-ins, helping art enthusiasts immerse themselves without the logistical hassle.
+          </p>
+        </div>
+
+        <!-- Metadata Bento Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-20">
+           <div class="p-5 md:p-6 bg-gray-50 rounded-2xl md:rounded-3xl border border-gray-100">
+              <p class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-wider mb-2">Role</p>
+              <p class="font-bold text-base md:text-lg text-gray-900">Product Designer</p>
+           </div>
+           <div class="p-5 md:p-6 bg-gray-50 rounded-2xl md:rounded-3xl border border-gray-100">
+              <p class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-wider mb-2">Timeline</p>
+              <p class="font-bold text-base md:text-lg text-gray-900">4 Weeks Sprints</p>
+           </div>
+           <div class="p-5 md:p-6 bg-gray-50 rounded-2xl md:rounded-3xl border border-gray-100">
+              <p class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-wider mb-2">Platform</p>
+              <p class="font-bold text-base md:text-lg text-gray-900">iOS & Android</p>
+           </div>
+           <div class="p-5 md:p-6 bg-gray-50 rounded-2xl md:rounded-3xl border border-gray-100">
+              <p class="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-wider mb-2">Tools</p>
+              <p class="font-bold text-base md:text-lg text-gray-900">Figma, Miro</p>
+           </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="rounded-2xl md:rounded-3xl overflow-hidden  border border-gray-100 relative aspect-video">
+            <img 
+              src="images/gallacover.png"
+              alt="Gallaflex App Mockup" 
+              class="w-full h-full object-cover  hover:grayscale-0 transition-all duration-700"
+            />
+            <div class="absolute inset-0 "></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section id="overview" class="py-16 md:py-24 px-4 md:px-12 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-5xl font-bold mb-6 md:mb-8 text-gray-900 tracking-tight">The Challenge</h2>
+        <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-10 md:mb-12 font-medium">
+          Art enthusiasts often struggle to discover nearby galleries when exploring new cities. On top of discovery, the physical check-in process involves queuing and paper tickets, taking time away from the actual experience.
+        </p>
+        
+        <div class="bg-gray-50 p-6 md:p-12 rounded-2xl md:rounded-3xl border border-gray-100">
+          <div class="flex flex-col md:flex-row items-start gap-4 md:gap-6">
+             <div class="p-4 bg-white rounded-2xl shadow-sm text-gray-900 hidden md:block">
+               <i data-lucide="target" class="w-8 h-8"></i>
+             </div>
+             <div>
+               <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Our Goal</h3>
+               <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                 To design a unified platform that allows users to <span class="font-bold text-gray-900 bg-gray-200 px-1 rounded">discover</span> exhibitions based on taste, <span class="font-bold text-gray-900 bg-gray-200 px-1 rounded">schedule</span> visits instantly, and access curation details to deepen their understanding of the art.
+               </p>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="py-16 md:py-24 px-4 md:px-12 bg-gray-50 rounded-t-[2.5rem] md:rounded-t-[3rem]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+          <!-- Sticky Header -->
+          <div class="md:col-span-4">
+            <div class="md:sticky md:top-32">
+               <span class="text-gray-400 font-bold tracking-widest uppercase text-sm mb-4 block">01. Research</span>
+               <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900 tracking-tight">Understanding <br class="hidden md:block"> the User</h2>
+               <p class="text-gray-500 text-lg mb-8">We conducted interviews with art lovers to identify friction points in the current gallery visiting experience.</p>
+               
+               <div class="p-6 bg-white rounded-3xl shadow-sm border border-gray-100">
+                 <h4 class="font-bold text-gray-900 mb-4 border-b border-gray-100 pb-2">Participant Criteria</h4>
+                 <ul class="space-y-3 text-gray-600 text-sm md:text-base">
+                    <li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-gray-900"></div> Art enthusiasts</li>
+                    <li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-gray-900"></div> Frequent travelers</li>
+                    <li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-gray-900"></div> Age 18-45</li>
+                 </ul>
+               </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="md:col-span-8 space-y-6 md:space-y-8">
+             <!-- Insight Cards -->
+             <div class="grid gap-4 md:gap-6">
+               <div class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
+                  <div class="w-10 h-10 md:w-12 md:h-12 bg-gray-900 text-white rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 font-bold text-lg md:text-xl">1</div>
+                  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Discovery is fragmented</h3>
+                  <p class="text-gray-600 text-base md:text-lg leading-relaxed">Users rely on multiple disjointed sources (Google Maps, Instagram, blogs) to find galleries, leading to decision fatigue.</p>
+               </div>
+               <div class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
+                  <div class="w-10 h-10 md:w-12 md:h-12 bg-gray-900 text-white rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 font-bold text-lg md:text-xl">2</div>
+                  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Logistics kill the vibe</h3>
+                  <p class="text-gray-600 text-base md:text-lg leading-relaxed">Long queues and physical ticketing processes break the immersion before the user even sees the art.</p>
+               </div>
+               <div class="bg-white p-6 md:p-8 rounded-2xl md:rounded-3xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
+                  <div class="w-10 h-10 md:w-12 md:h-12 bg-gray-900 text-white rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 font-bold text-lg md:text-xl">3</div>
+                  <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Missing Context</h3>
+                  <p class="text-gray-600 text-base md:text-lg leading-relaxed">Visitors often want more context about the artwork but find gallery plaques insufficient or crowded.</p>
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Persona Section -->
+    <section class="py-16 md:py-24 px-4 md:px-12 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+           <span class="text-gray-400 font-bold tracking-widest uppercase text-sm mb-4 block">02. Persona</span>
+           <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900 tracking-tight">Meet Olivia</h2>
+           <p class="text-lg md:text-xl text-gray-500">We synthesized our findings into a primary persona to guide our design decisions.</p>
+        </div>
+
+        <div class="bg-gray-50 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-16 border border-gray-100 relative overflow-hidden">
+           <!-- Decoration -->
+           <div class="absolute top-0 right-0 w-64 h-64 bg-gray-200 rounded-full blur-3xl opacity-50 -mr-16 -mt-16"></div>
+
+           <div class="relative z-10 flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+              <div class="w-full md:w-1/3 flex flex-col items-center text-center">
+                 <img src="images/Olivia.png" alt="Persona" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover mb-6 shadow-lg border-4 border-white grayscale">
+                 <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Olivia, 28</h3>
+                 <p class="text-white font-bold bg-gray-900 px-4 py-1 rounded-full text-sm mb-6">The Creative Explorer</p>
+                 <p class="text-gray-600 italic">"I want to immerse myself in the art world without the hassle of logistics."</p>
+              </div>
+
+              <div class="w-full md:w-2/3 grid md:grid-cols-2 gap-6 md:gap-8">
+                 <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      <i data-lucide="smile" class="text-gray-500"></i> Goals
+                    </h4>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base">
+                       <li>• Understand art history instantly</li>
+                       <li>• Check-in seamlessly via mobile</li>
+                       <li>• Find hidden gems nearby</li>
+                    </ul>
+                 </div>
+                 <div class="bg-white p-6 rounded-3xl shadow-sm">
+                    <h4 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      <i data-lucide="frown" class="text-gray-400"></i> Frustrations
+                    </h4>
+                    <ul class="space-y-3 text-gray-600 text-sm md:text-base">
+                       <li>• Galleries closed unexpectedly</li>
+                       <li>• Paper tickets & long lines</li>
+                       <li>• Overcrowded spaces</li>
+                    </ul>
+                 </div>
+                 
+                 <!-- Empathy Grid Mini -->
+                 <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-2">
+                    <div class="bg-gray-100 p-4 rounded-2xl text-center">
+                       <p class="text-xs font-bold text-gray-400 uppercase mb-1">Says</p>
+                       <p class="text-xs text-gray-900">"I want connection."</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-2xl text-center">
+                       <p class="text-xs font-bold text-gray-400 uppercase mb-1">Thinks</p>
+                       <p class="text-xs text-gray-900">"Needs convenience."</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-2xl text-center">
+                       <p class="text-xs font-bold text-gray-400 uppercase mb-1">Does</p>
+                       <p class="text-xs text-gray-900">"Shares on social."</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-2xl text-center">
+                       <p class="text-xs font-bold text-gray-400 uppercase mb-1">Feels</p>
+                       <p class="text-xs text-gray-900">"Inspired yet annoyed."</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Usability & Process -->
+    <section class="py-16 md:py-24 px-4 md:px-12 bg-white">
+       <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-12 gap-8 md:gap-12">
+            <div class="md:col-span-4">
+               <div class="md:sticky md:top-32">
+                   <span class="text-gray-400 font-bold tracking-widest uppercase text-sm mb-4 block">03. Testing</span>
+                   <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900 tracking-tight">Sample Interview Note Sheets</h2>
+                   <p class="text-gray-500 text-lg mb-8">Detailed observations from our usability testing sessions.</p>
+                   
+                   <!-- Legend -->
+                   <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100">
+                       <h4 class="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wide">Task Completion Legend</h4>
+                       <div class="space-y-3">
+                           <div class="flex items-center justify-between">
+                               <span class="text-sm text-gray-600">Easy to complete</span>
+                               <span class="bg-gray-900 text-white px-2 py-1 rounded text-xs font-bold">Score: 1</span>
+                           </div>
+                           <div class="flex items-center justify-between">
+                               <span class="text-sm text-gray-600">Completed with difficulty</span>
+                               <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-xs font-bold">Score: 2</span>
+                           </div>
+                           <div class="flex items-center justify-between">
+                               <span class="text-sm text-gray-600">Not completed</span>
+                               <span class="bg-white border border-gray-300 text-gray-400 px-2 py-1 rounded text-xs font-bold">Score: 3</span>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+            
+            <div class="md:col-span-8 space-y-8 md:space-y-12">
+               <!-- Participant Card 1: Nina -->
+               <div class="border border-gray-200 rounded-[2rem] overflow-hidden bg-white shadow-sm w-full">
+                  <div class="bg-gray-50 px-6 py-5 border-b border-gray-200 flex justify-between items-center">
+                     <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 text-gray-900 flex items-center justify-center text-sm font-bold">N</div>
+                        <div>
+                            <span class="font-bold text-gray-900 block">Participant: Nina</span>
+                            <span class="text-xs text-gray-500">Full Session Log</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="overflow-x-auto w-full">
+                     <table class="w-full text-sm text-left min-w-[600px]">
+                        <thead>
+                           <tr class="text-gray-400 bg-gray-50/50 border-b border-gray-100 text-xs uppercase tracking-wider">
+                              <th class="px-6 py-4 font-bold w-1/4">Task / Prompt</th>
+                              <th class="px-6 py-4 font-bold w-1/4">Click Path</th>
+                              <th class="px-6 py-4 font-bold w-1/4">Observations & Quotes</th>
+                              <th class="px-6 py-4 font-bold text-right w-24">Score</th>
+                           </tr>
+                        </thead>
+                        <tbody class="text-gray-600 divide-y divide-gray-100">
+                           <!-- Row 1 -->
+                           <tr class="hover:bg-gray-50 transition-colors">
+                              <td class="px-6 py-4 align-top">
+                                  <strong class="block text-gray-900 mb-1">Prompt 1</strong>
+                                  "Let's open the app. Now try to search for art galleries in your area."
+                              </td>
+                              <td class="px-6 py-4 align-top text-xs font-mono text-gray-500">
+                                  Home page → Search location by Name → scroll listing
+                              </td>
+                              <td class="px-6 py-4 align-top space-y-2">
+                                  <p class="text-xs text-gray-500">• Looking for list-view switch<br>• Ignored "current location" feature</p>
+                                  <p class="italic text-gray-800 bg-gray-50 p-2 rounded-lg">"Oh, this is map view. I need list view like Airbnb."</p>
+                              </td>
+                              <td class="px-6 py-4 align-top text-right">
+                                  <span class="bg-gray-900 text-white px-2 py-1 rounded text-xs font-bold">1</span>
+                              </td>
+                           </tr>
+                           <!-- Row 2 -->
+                           <tr class="hover:bg-gray-50 transition-colors">
+                              <td class="px-6 py-4 align-top">
+                                  <strong class="block text-gray-900 mb-1">Prompt 2</strong>
+                                  "See the details of a specific art gallery."
+                              </td>
+                              <td class="px-6 py-4 align-top text-xs font-mono text-gray-500">
+                                  Home → Search → scroll → Apply Filters → Click card
+                              </td>
+                              <td class="px-6 py-4 align-top space-y-2">
+                                  <p class="text-xs text-gray-500">• Took time to scroll<br>• Struggled with filters</p>
+                                  <p class="italic text-gray-800 bg-gray-50 p-2 rounded-lg">"Hmm, I can scroll, but it took time to figure out."</p>
+                              </td>
+                              <td class="px-6 py-4 align-top text-right">
+                                  <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-xs font-bold">2</span>
+                              </td>
+                           </tr>
+                           <!-- Row 3 -->
+                           <tr class="hover:bg-gray-50 transition-colors">
+                              <td class="px-6 py-4 align-top">
+                                  <strong class="block text-gray-900 mb-1">Prompt 3</strong>
+                                  "Schedule a visit with an art gallery owner."
+                              </td>
+                              <td class="px-6 py-4 align-top text-xs font-mono text-gray-500">
+                                  ... → Detail page → Schedule
+                              </td>
+                              <td class="px-6 py-4 align-top space-y-2">
+                                  <p class="text-xs text-gray-500">• Confused by button label<br>• Didn't scroll details<br>• Wanted to return home</p>
+                                  <p class="italic text-gray-800 bg-gray-50 p-2 rounded-lg">"This button seems confusing. What do I schedule?"</p>
+                              </td>
+                              <td class="px-6 py-4 align-top text-right">
+                                  <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-xs font-bold">2</span>
+                              </td>
+                           </tr>
+                           <!-- Row 4 -->
+                           <tr class="hover:bg-gray-50 transition-colors">
+                              <td class="px-6 py-4 align-top">
+                                  <strong class="block text-gray-900 mb-1">Prompt 4</strong>
+                                  "Confirm your booking."
+                              </td>
+                              <td class="px-6 py-4 align-top text-xs font-mono text-gray-500">
+                                  ... → Schedule → Confirmation Page
+                              </td>
+                              <td class="px-6 py-4 align-top space-y-2">
+                                  <p class="italic text-gray-800 bg-gray-50 p-2 rounded-lg">"Finally, I am here. Yes, I confirm."</p>
+                              </td>
+                              <td class="px-6 py-4 align-top text-right">
+                                  <span class="bg-gray-900 text-white px-2 py-1 rounded text-xs font-bold">1</span>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="bg-gray-50 p-4 border-t border-gray-200 text-sm text-gray-500">
+                      <strong>Additional Notes:</strong> Participant found the map view initially confusing but liked the scheduling confirmation screen.
+                  </div>
+               </div>
+               
+               <!-- Participant Card 2: Sangay Wangdi -->
+               <div class="border border-gray-200 rounded-[2rem] overflow-hidden bg-white shadow-sm w-full">
+                  <div class="bg-gray-50 px-6 py-5 border-b border-gray-200 flex justify-between items-center">
+                     <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-200 text-gray-900 flex items-center justify-center text-sm font-bold">S</div>
+                        <div>
+                            <span class="font-bold text-gray-900 block">Participant: Sangay Wangdi</span>
+                            <span class="text-xs text-gray-500">Full Session Log</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="overflow-x-auto w-full">
+                     <table class="w-full text-sm text-left min-w-[600px]">
+                        <thead>
+                           <tr class="text-gray-400 bg-gray-50/50 border-b border-gray-100 text-xs uppercase tracking-wider">
+                              <th class="px-6 py-4 font-bold w-1/4">Task / Prompt</th>
+                              <th class="px-6 py-4 font-bold w-1/4">Click Path</th>
+                              <th class="px-6 py-4 font-bold w-1/4">Observations & Quotes</th>
+                              <th class="px-6 py-4 font-bold text-right w-24">Score</th>
+                           </tr>
+                        </thead>
+                        <tbody class="text-gray-600 divide-y divide-gray-100">
+                           <!-- Row 1 -->
+                           <tr class="hover:bg-gray-50 transition-colors">
+                              <td class="px-6 py-4 align-top">
+                                  <strong class="block text-gray-900 mb-1">Prompt 1</strong>
+                                  "Search for art galleries in your area."
+                              </td>
+                              <td class="px-6 py-4 align-top text-xs font-mono text-gray-500">
+                                  Home page → On current location → scroll listing
+                              </td>
+                              <td class="px-6 py-4 align-top space-y-2">
+                                  <p class="text-xs text-gray-500">• Didn't use search function<br>• Didn't use filters</p>
+                                  <p class="italic text-gray-800 bg-gray-50 p-2 rounded-lg">"Yes, on current location."</p>
+                              </td>
+                              <td class="px-6 py-4 align-top text-right">
+                                  <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-xs font-bold">2</span>
+                              </td>
+                           </tr>
+                           <!-- Row 2 -->
+                           <tr class="hover:bg-gray-50 transition-colors">
+                              <td class="px-6 py-4 align-top">
+                                  <strong class="block text-gray-900 mb-1">Prompt 2</strong>
+                                  "See the details of a specific art gallery."
+                              </td>
+                              <td class="px-6 py-4 align-top text-xs font-mono text-gray-500">
+                                  Home → Search → scroll → Click card
+                              </td>
+                              <td class="px-6 py-4 align-top space-y-2">
+                                  <p class="text-xs text-gray-500">• Couldn't figure out how to click card initially</p>
+                                  <p class="italic text-gray-800 bg-gray-50 p-2 rounded-lg">"Where do I click? Is there a button... Oh, I can click on the cards, cool."</p>
+                              </td>
+                              <td class="px-6 py-4 align-top text-right">
+                                  <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-xs font-bold">2</span>
+                              </td>
+                           </tr>
+                           <!-- Row 3 -->
+                           <tr class="hover:bg-gray-50 transition-colors">
+                              <td class="px-6 py-4 align-top">
+                                  <strong class="block text-gray-900 mb-1">Prompt 3</strong>
+                                  "Schedule a visit with an art gallery owner."
+                              </td>
+                              <td class="px-6 py-4 align-top text-xs font-mono text-gray-500">
+                                  ... → Detail page → Schedule
+                              </td>
+                              <td class="px-6 py-4 align-top space-y-2">
+                                  <p class="text-xs text-gray-500">• Took time to find/understand "Schedule"<br>• Slow to fill details</p>
+                                  <p class="italic text-gray-800 bg-gray-50 p-2 rounded-lg">"Schedule, let’s see where it leads to. Okay, that is a lot of details."</p>
+                              </td>
+                              <td class="px-6 py-4 align-top text-right">
+                                  <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded text-xs font-bold">2</span>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- Design System -->
+    <section class="py-16 md:py-24 px-4 md:px-12 bg-gray-900 text-white rounded-[2rem] md:rounded-[3rem] mx-2 md:mx-8">
+       <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+             <div class="w-full md:w-1/3">
+                <span class="text-gray-400 font-bold tracking-widest uppercase text-sm mb-4 block">04. Visuals</span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight">The Design System</h2>
+                <p class="text-gray-400 text-lg mb-8">A clean, minimalist aesthetic that lets the art take center stage. We used plenty of whitespace and a sophisticated dark neutral palette for the app UI.</p>
+             </div>
+             
+             <div class="w-full md:w-2/3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                   <!-- Typography Card -->
+                   <div class="bg-gray-800 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-gray-700">
+                      <h3 class="text-gray-400 font-bold uppercase text-sm mb-6">Typography</h3>
+                      <div class="space-y-2">
+                         <span class="text-4xl md:text-5xl font-bold block">Aa</span>
+                         <span class="text-lg md:text-xl font-medium block">Raleway</span>
+                         <p class="text-gray-500 text-sm mt-4">Used for its elegant, artistic feel.</p>
+                      </div>
+                   </div>
+                   <!-- Color Card -->
+                   <div class="bg-gray-800 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-gray-700">
+                      <h3 class="text-gray-400 font-bold uppercase text-sm mb-6">Palette</h3>
+                      <div class="flex gap-4 justify-center md:justify-start">
+                         <div class="space-y-2 text-center">
+                            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#2D3748] mx-auto ring-4 ring-gray-700"></div>
+                            <span class="text-xs text-gray-400">#2D3748</span>
+                         </div>
+                         <div class="space-y-2 text-center">
+                            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#8571FC] mx-auto ring-4 ring-gray-700"></div>
+                            <span class="text-xs text-gray-400">#8571FC</span>
+                         </div>
+                         <div class="space-y-2 text-center">
+                            <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#F7FAFC] mx-auto ring-4 ring-gray-700"></div>
+                            <span class="text-xs text-gray-400">#F7FAFC</span>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- Mockups -->
+    <section id="visuals" class="py-20 md:py-32 px-4 md:px-12 bg-white">
+       <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-12 md:mb-20">
+             <h2 class="text-3xl md:text-6xl font-bold mb-6 text-gray-900 tracking-tight">Final Designs</h2>
+             <p class="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto">High fidelity screens demonstrating the core discovery and booking flows.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start">
+             <!-- Screen 1 -->
+             <div class="group">
+                <div class="bg-gray-100 rounded-[2rem] md:rounded-[2.5rem] p-4 border border-gray-200 transition-transform duration-500 hover:-translate-y-4">
+                   <div class="rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-xl border-4 md:border-8 border-white">
+                      <img src="images/discover.png" alt="Home" class="w-full h-auto block grayscale group-hover:grayscale-0 transition-all duration-500">
+                   </div>
+                </div>
+                <p class="text-center font-bold text-lg mt-6 text-gray-900">Discovery</p>
+             </div>
+             
+             <!-- Screen 2 (Offset) -->
+             <div class="group md:mt-16">
+                <div class="bg-gray-100 rounded-[2rem] md:rounded-[2.5rem] p-4 border border-gray-200 transition-transform duration-500 hover:-translate-y-4">
+                   <div class="rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-xl border-4 md:border-8 border-white">
+                      <img src="images/details.png" alt="Details" class="w-full h-auto block grayscale group-hover:grayscale-0 transition-all duration-500">
+                   </div>
+                </div>
+                <p class="text-center font-bold text-lg mt-6 text-gray-900">Exhibition Details</p>
+             </div>
+
+             <!-- Screen 3 -->
+             <div class="group">
+                <div class="bg-gray-100 rounded-[2rem] md:rounded-[2.5rem] p-4 border border-gray-200 transition-transform duration-500 hover:-translate-y-4">
+                   <div class="rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-xl border-4 md:border-8 border-white">
+                      <img src="images/schedulevist.png" alt="Booking" class="w-full h-auto block grayscale group-hover:grayscale-0 transition-all duration-500">
+                   </div>
+                </div>
+                <p class="text-center font-bold text-lg mt-6 text-gray-900">Instant Booking</p>
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <footer class="bg-gray-50 py-16 md:py-24 px-4 md:px-12 border-t border-gray-200">
+       <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-2xl md:text-4xl font-bold mb-6 md:mb-8 text-gray-900">Key Takeaways</h2>
+          <p class="text-lg md:text-xl text-gray-600 leading-relaxed mb-10 md:mb-12">
+In conclusion, our project has improved the user experience for art enthusiasts visiting galleries. To further enhance the platform, we plan to introduce a rewards and points system for user engagement, develop a feature for creating gallery itineraries, and implement a user rating and review system for galleries. Continuously gather user feedback, provide education on new features, and monitor user data for further refinements. These enhancements 
+will create a more engaging, personalized, and informative art gallery experience for our users.          </p>
+          
+          <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="https://www.behance.net/jurme" class="px-6 py-3 rounded-full bg-white text-neutral-900 font-bold hover:bg-neutral-200 transition-colors">Behance</a>
+          <a href="https://dribbble.com/Jurme" class="px-6 py-3 rounded-full bg-white text-neutral-900 font-bold hover:bg-neutral-200 transition-colors">Dribbble</a>
+          <a href="https://www.linkedin.com/in/jurme-tenzin-299892137/" class="px-6 py-3 rounded-full bg-white text-neutral-900 font-bold hover:bg-neutral-200 transition-colors">LinkedIn</a>
+          </div>
+                    
+        </div>
+      
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
